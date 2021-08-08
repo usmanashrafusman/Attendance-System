@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Admin Page</title>
+</head>
+
+
+<body>
+
+  <div class="container">
+    <div class="buttons">
+
+      <button type="button" id="addstudent" class="dropbtn" style="display: inline-block;">Add Student</button>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Mark Attendence</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="Morning.html">Morning</a>
+          <a href="Afternoon.html">Afternoon</a>
+          <a href="Evening.html">Evening</a>
+          <a href="Night.html">Night</a>
+        </div>
+      </div>
+    </div>
+ 
+
+    <form id="showw">
+      <fieldset>
+        <legend>Foam For Adding Students</legend>
+        <div> Roll No :
+          <input type="text" name="username" id="rollNo" required>
+
+        </div>
+
+
+
+        <div>
+
+          Username
+          <input type="text" id="name" required>
+        </div>
+        <div>Shift
+          <select value="Shift" id="shift" required>
+            <option id="Morning">Morning</option>
+            <option id="Afternoon">Afternoon</option>
+            <option id="Evening">Evening</option>
+            <option id="Night">Night</option>
+          </select>
+        </div>
+        <div>
+          Email
+          <input type="email" id="email" required>
+        </div>
+        <div>
+          Phone No :
+          <input type="" id="phone" required>
+        </div>
+
+        <button type="button" value="Add student" id="adduser" class="dropbtn">Add student</button>
+      </fieldset>
+      <p class="demo" style="color: red; font-weight: 700;"></p>
+    </form>
+
+
+
+
+  </div>
+
+<script src="admin.js"></script>
+</body>
+
+</html>

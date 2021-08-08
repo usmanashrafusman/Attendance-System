@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        div{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+        h1{    font-weight: 900;
+    text-align: center;
+    color: #66d483;
+    font-family: -webkit-pictograph;
+    text-transform: uppercase;}
+.property{
+    font-family: emoji;
+    font-size: 28px;
+    border: none;
+    width: 53%;
+    color: #66d483;
+    font-weight: 400;
+}
+.property:focus{
+    border:none;
+}
+#username,#password{border: none;
+    border-bottom: 2px solid #66d483;
+    margin-left: 83px;}
+#signin{
+    background: #66d483;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    font-size: 19px;
+    border-radius: 250px;
+}
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Attendance System</h1>
+
+
+        <fieldset class="property">  Username
+            <input type="text" id="username" placeholder="Username">
+       </fieldset>  
+      
+       <fieldset class="property">Password:
+                <input type="password" id="password" placeholder="Password">
+      </fieldset>
+      
+          <input type="button" id="signin" value="Sign In">
+
+<p class="demo" style="color: red; font-weight: 700;"></p>
+      
+    </div>
+
+    
+    <script>
+let signIn = document.querySelector("#signin")
+        const validate = () => {
+            let username = document.querySelector("#username").value;
+            // console.log(username)
+            let password = document.querySelector("#password").value;
+            // console.log(password)
+            if (username == "admin" && password == "admin") {
+                location.href = "admin features.html";
+                document.querySelector(".demo").innerHTML=""
+            }
+            else {
+               document.querySelector(".demo").innerHTML="Username Or Password Is Incorrect"
+            }
+        }
+        signIn.addEventListener("click", validate)
+
+
+    </script>
+</body>
+
+</html>
